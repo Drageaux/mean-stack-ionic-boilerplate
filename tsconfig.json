@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "declaration": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "lib": [
+      "es2015",
+      "dom"
+    ],
+    "module": "es2015",
+    "moduleResolution": "node",
+    "typeRoots": [
+      "./node_modules/@types"
+    ],
+    "sourceMap": true,
+    "target": "es5"
+  },
+  "include": [
+    "client/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "client/**/*.spec.ts",
+    "client/**/__tests__/*.ts",
+    "typings"
+  ],
+  "compileOnSave": false,
+  "atom": {
+    "rewriteTsconfig": false
+  }
+}
