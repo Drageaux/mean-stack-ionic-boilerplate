@@ -21,11 +21,11 @@ db.on('error', console.error.bind(console, '[DATABASE] MongoDB connection error:
 
 
 /** SERVE PUBLIC FILES */
-app.use('/', express.static(__dirname + '/ionic-app/www'));
+app.use('/', express.static(__dirname + '/www'));
 
 /** API ENDPOINTS */
 // import the API controllers
-var sampleRouter = require('./server/routes/sampleRouter');
+var sampleRouter = require('./server/routers/sampleRouter');
 // register controllers for endpoints
 router.use('/sample', sampleRouter);//Api for devices
 // any route starting with '/api' will be interfacing our API
@@ -34,7 +34,7 @@ app.use('/api', router);
 
 /** RUN APP */
 var server = app.listen(process.env.PORT || '3000', function () {
-    console.log('[SERVER] I\'m listening on PORT: ' + (process.env.PORT || '3000'));
+  console.log('[SERVER] I\'m listening on PORT: ' + (process.env.PORT || '3000'));
 });
 
 module.exports = server;
